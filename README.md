@@ -1,6 +1,6 @@
 # LeetCode
 
-# Check list:
+## Check list:
 1. overflow
 2. namespaces (using)
 3. always return
