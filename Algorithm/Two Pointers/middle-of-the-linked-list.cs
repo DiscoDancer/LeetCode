@@ -14,12 +14,10 @@ public class Solution {
         const int possibleZide = 100;
         var arr = new ListNode[possibleZide];
         
-        int k = 1;
-        var cur = head;
-        arr[0] = cur;
-        while (cur.next != null) {
-            cur = cur.next;
-            arr[k++] = cur;
+        int k = 0;
+        while (head != null) {
+            arr[k++] = head;
+            head = head.next;
         }
         
         return arr[k / 2];
