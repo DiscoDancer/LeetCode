@@ -19,3 +19,14 @@ String to chars:
 ```
 var a = s.ToCharArray();
 ```
+
+2d array:
+```
+var visited = new bool[grid.Length][];
+for (int i = 0; i < grid.Length; i++) {
+  visited[i] = new bool[grid[0].Length];
+}
+```
+
+## Didn't solve list:
+- https://leetcode.com/problems/max-area-of-island/submissions/
