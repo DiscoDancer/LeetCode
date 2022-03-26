@@ -19,3 +19,6 @@ String to chars:
 ```
 var a = s.ToCharArray();
 ```
+
+## Didn't solve list:
+- https://leetcode.com/problems/max-area-of-island/submissions/
