@@ -28,5 +28,20 @@ for (int i = 0; i < grid.Length; i++) {
 }
 ```
 
+Queue API:
+```
+q.Enqueue();
+q.Dequeue();
+q.Peek(); // get first, but not remove
+q.Any();
+q.Count; 
+```
+
+Pow and Log:
+```
+System.Math.Log(8, 2); // 3
+System.Math.Pow(8, 2); // 64 
+```
+
 ## Didn't solve list:
 - https://leetcode.com/problems/max-area-of-island/submissions/
