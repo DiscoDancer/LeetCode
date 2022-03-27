@@ -34,6 +34,7 @@ q.Enqueue();
 q.Dequeue();
 q.Peek(); // get first, but not remove
 q.Any();
+q.Count; 
 ```
 
 Pow and Log:
