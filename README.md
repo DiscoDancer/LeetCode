@@ -1,5 +1,9 @@
 # LeetCode
 
+- Started in 20th of March 2022
+- Goal is to have 540 tasks solved in 180 days
+- Current debt (28.03) is 4 tasks.
+
 ## Check list:
 1. overflow
 2. namespaces (using)
