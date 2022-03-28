@@ -45,3 +45,4 @@ System.Math.Pow(8, 2); // 64
 
 ## Didn't solve list:
 - https://leetcode.com/problems/max-area-of-island/submissions/
+- https://leetcode.com/problems/01-matrix/submissions/
