@@ -20,15 +20,12 @@
 
 ## C# features:
 
-Chars to string:
+string API:
 ```
 char[] chars = {'a', ' ', 's', 't', 'r', 'i', 'n', 'g'};
 string s = new string(chars);
-```
-
-String to chars:
-```
 var a = s.ToCharArray();
+char c = s[i];
 ```
 
 2d array:
