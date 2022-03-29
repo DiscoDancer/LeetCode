@@ -39,9 +39,6 @@ for (int i = 0; i < grid.Length; i++) {
 }
 ```
 
-## ASCII
-- 'A' < 'a'
-
 Queue API:
 ```
 q.Enqueue();
@@ -54,6 +51,8 @@ q.Count;
 List API:
 ```
 l.RemoveAt();
+l.AddRange();
+l.Reverse():void;
 ```
 
 Pow and Log:
@@ -61,6 +60,8 @@ Pow and Log:
 System.Math.Log(8, 2); // 3
 System.Math.Pow(8, 2); // 64 
 ```
+## ASCII
+- 'A' < 'a'
 
 ## Didn't solve list:
 - https://leetcode.com/problems/max-area-of-island/submissions/
