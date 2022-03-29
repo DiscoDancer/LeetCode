@@ -39,6 +39,9 @@ for (int i = 0; i < grid.Length; i++) {
 }
 ```
 
+## ASCII
+- 'A' < 'a'
+
 Queue API:
 ```
 q.Enqueue();
