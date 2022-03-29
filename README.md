@@ -2,7 +2,8 @@
 
 - Started in 20th of March 2022
 - Goal is to have 540 tasks solved in 180 days
-- Current debt (28.03) is 4 tasks.
+- Current debt (28.03) is 4 tasks
+- https://leetcode.com/DiscoDancer
 
 ## Check list:
 1. overflow
@@ -10,6 +11,12 @@
 3. always return
 4. indexing based on 0 or 1
 5. If "Given a 1-indexed", then increase indexes only in answer
+
+## Combination Math
+
+1. ```P = n!``` (just amount of combinations, without choosing)
+2. ```A = n! / (n - m)!``` (choose m from n, all positions matter)
+3. ```C = n! / ((n - m)! * m!)``` (choose m from n, positions don't matter)
 
 ## C# features:
 
