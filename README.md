@@ -55,11 +55,30 @@ l.AddRange();
 l.Reverse():void;
 ```
 
+Char API:
+```
+char.IsLetter(); // static
+char.ToLower(char; string, int); // static
+char.ToUpper(char; string, int); // static
+```
+
+String API:
+```
+// support of linq
+```
+
 Pow and Log:
 ```
 System.Math.Log(8, 2); // 3
 System.Math.Pow(8, 2); // 64 
 ```
+Bits API:
+```
+1 << 1 // left shift 01 -> 10
+2 >> 1 // right 10 -> 01
+2 & 1 // 10 & 01 = 1
+```
+
 ## ASCII
 - 'A' < 'a'
 
