@@ -48,6 +48,11 @@ q.Any();
 q.Count; 
 ```
 
+List API:
+```
+l.RemoveAt();
+```
+
 Pow and Log:
 ```
 System.Math.Log(8, 2); // 3
