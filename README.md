@@ -58,6 +58,8 @@ l.Reverse():void;
 Char API:
 ```
 char.IsLetter(); // static
+char.ToLower(char; string, int); // static
+char.ToUpper(char; string, int); // static
 ```
 
 String API:
@@ -73,6 +75,8 @@ System.Math.Pow(8, 2); // 64
 Bits API:
 ```
 1 << 1 // left shift 01 -> 10
+2 >> 1 // right 10 -> 01
+2 & 1 // 10 & 01 = 1
 ```
 
 ## ASCII
