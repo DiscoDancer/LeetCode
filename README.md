@@ -2,7 +2,7 @@
 
 - Started in 20th of March 2022
 - Goal is to have 540 tasks solved in 180 days
-- Current debt (1.04) is 2 tasks
+- Current debt (2.04) is 3 tasks
 - https://leetcode.com/DiscoDancer
 
 ## Check list:
@@ -85,3 +85,4 @@ Bits API:
 - https://leetcode.com/problems/01-matrix/submissions/
 - https://leetcode.com/problems/combinations/
 - https://leetcode.com/problems/merge-sorted-array/solution/
+- https://leetcode.com/problems/reverse-bits/submissions/
