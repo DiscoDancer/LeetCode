@@ -85,3 +85,4 @@ Bits API:
 - https://leetcode.com/problems/01-matrix/submissions/
 - https://leetcode.com/problems/combinations/
 - https://leetcode.com/problems/merge-sorted-array/solution/
+- https://leetcode.com/problems/reverse-bits/submissions/
