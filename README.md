@@ -2,7 +2,9 @@
 
 - Started in 20th of March 2022
 - Goal is to have 540 tasks solved in 180 days
+<<<<<<< HEAD
 - Current debt (3.04) is 2 tasks
+=======
 - https://leetcode.com/DiscoDancer
 
 ## Check list:
