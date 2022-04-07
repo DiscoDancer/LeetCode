@@ -28,6 +28,12 @@ var a = s.ToCharArray();
 char c = s[i];
 ```
 
+Tuples:
+```
+var stack = new Stack<(TreeNode node, int acc)>();
+stack.Push((root, 0));
+```
+
 2d array:
 ```
 var visited = new bool[grid.Length][];
