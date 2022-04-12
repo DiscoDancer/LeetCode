@@ -3,7 +3,7 @@
 - Started in 20th of March 2022
 - Goal is to have 360 tasks solved in 180 days
 - Current plan: ```((DateTime.Now - DateTime.Parse("03/20/2022")).Days + 1) *2```
-- Current debt (11.04) is ```-27``` tasks
+- Current debt (11.04) is ```-26``` tasks
 - https://leetcode.com/DiscoDancer
 
 ## Check list:
@@ -18,6 +18,9 @@
 1. ```P = n!``` (just amount of combinations, without choosing)
 2. ```A = n! / (n - m)!``` (choose m from n, all positions matter)
 3. ```C = n! / ((n - m)! * m!)``` (choose m from n, positions don't matter)
+
+## Geometry
+- Check if a point belongs to a line: ```(x - x_1) / (x_2 - x1) = (y - y_1) / (y_2 - y_1)```
 
 ## C# features:
 
