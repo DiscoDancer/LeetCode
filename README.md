@@ -3,7 +3,7 @@
 - Started in 20th of March 2022
 - Goal is to have 360 tasks solved in 180 days
 - Current plan: ```((DateTime.Now - DateTime.Parse("03/20/2022")).Days + 1) *2```
-- Current debt (13.04) is ```-31``` tasks
+- Current debt (13.04) is ```-32``` tasks
 - https://leetcode.com/DiscoDancer
 
 ## Check list:
