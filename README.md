@@ -100,3 +100,4 @@ Bits API:
 - https://leetcode.com/problems/maximum-subarray
 - https://leetcode.com/problems/maximum-sum-circular-subarray
 - https://leetcode.com/problems/maximum-product-subarray
+- https://leetcode.com/problems/maximum-length-of-subarray-with-positive-product/
