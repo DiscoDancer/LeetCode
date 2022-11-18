@@ -1,3 +1,6 @@
+// тут нужно рисовать 3 точки,
+// получить 9 случаев и думать в каком случае что
+
 public class Solution {
     private int _max = -1;
     private int _maxIndex = -1;
@@ -32,9 +35,7 @@ public class Solution {
             UpdateMax(arr[a], a);
             UpdateMax(arr[b], b);
             UpdateMax(arr[m], m);
-                        
-            // TODO проверить на пустые отрезки
-            
+                                    
             if (arr[a] == arr[m] && arr[m] == arr[b]) {
                 queue.Enqueue((a + 1, m - 1)); // am
                 queue.Enqueue((m+1, b-1)); // mb
