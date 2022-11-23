@@ -1,21 +1,18 @@
 public class Solution {
-    // TODO решить за n^n
     // в instern я вроде b + 1 вовзращал
+    // n*n = too slow
     public int MySqrt(int x) {
         if (x < 2) {
             return x;
         }
         
-        for (int i = 1; i <= x; i++) {
-            int res = i * i;
-            if (res == x) {
+        long xx = x;
+        
+        for (int i = 1; i <= xx; i++) {
+            long res = i * i;
+            if (res == xx) {
                 return i;
-            } else if (res > x) {
-                int max = res;
-                int min = res - 1;
-                if (max - x < x - min) {
-                    return i + 1;
-                }
+            } else if (res > xx) {
                 return i - 1;
             }
         }
