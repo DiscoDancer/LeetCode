@@ -29,7 +29,7 @@ public class Solution {
             return new int[] {-1, -1};
         }
         
-        var y = b +1;
+        var x = b +1;
         
         a = 0;
         b = nums.Length - 1;
@@ -45,9 +45,9 @@ public class Solution {
             }
         }
         
-        var x = a - 1;
+        var y = a - 1;
         
-        return new int[] {y, x};
+        return new int[] {x, y};
         
     }
 }
