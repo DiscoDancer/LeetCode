@@ -13,14 +13,13 @@ public class Solution {
             while (j >= 0 && t[j] != c) {
                 j--;
             }
+            // либо нашел, либо кончился
             if (j < 0) {
                 return false;
             }
-            else if (t[j] == c) {
-                j--;
-            }
+            // нужно сдвигаться, когда нашел
             else {
-                return false;
+                j--;
             }
         }
 
