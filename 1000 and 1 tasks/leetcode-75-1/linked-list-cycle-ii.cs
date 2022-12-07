@@ -9,6 +9,7 @@
  *     }
  * }
  */
+
 public class Solution {
     public ListNode DetectCycle(ListNode head) {
         var hashSet = new HashSet<ListNode>();
