@@ -10,26 +10,27 @@ public class Solution {
         var Y = grid[0].Length;
 
         var queue = new Queue<(int x, int y)>();
+        _visited[_x,_y] = true; 
         queue.Enqueue((_x,_y));
 
         while (queue.Any()) {
             var (x, y) = queue.Dequeue();
-            if (_visited[x,y]) {
-                continue;
-            }
-            _visited[x,y] = true;
 
             if (x > 0 && grid[x-1][y] == '1' && !_visited[x-1, y]) {
+                _visited[x-1,y] = true;
                 queue.Enqueue((x-1,y));
             }
             if (x < X - 1 && grid[x+1][y] == '1' && !_visited[x+1, y]) {
+                _visited[x+1,y] = true;
                 queue.Enqueue((x+1,y));
             }
 
             if (y > 0 && grid[x][y-1] == '1' && !_visited[x, y-1]) {
+                _visited[x,y-1] = true;
                 queue.Enqueue((x,y-1));
             }
             if (y < Y - 1 && grid[x][y+1] == '1' && !_visited[x, y+1]) {
+                _visited[x,y+1] = true;
                 queue.Enqueue((x,y+1));
             }
         }
