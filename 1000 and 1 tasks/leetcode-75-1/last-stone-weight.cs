@@ -1,9 +1,8 @@
-public class Solution
-{
-    public static int LastStoneWeight(int[] stones) {
+public class Solution {
+    public int LastStoneWeight(int[] stones) {
         var queue = new PriorityQueue<int, int>();
         foreach (var s in stones) {
-            queue.Enqueue(s,- s);
+            queue.Enqueue(s, - s);
         }
 
         while (queue.Count > 1) {
@@ -17,11 +16,5 @@ public class Solution
         }
 
         return queue.Count == 1 ? queue.Dequeue() : 0;
-    }
-
-
-    public static void Main()
-    {
-        Console.WriteLine(LastStoneWeight(new []{2,7,4,1,8,1}));
     }
 }
