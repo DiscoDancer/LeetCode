@@ -44,22 +44,5 @@ public class Solution {
         res.Reverse();
 
         return res.Aggregate((x, y) => x + y);
-
-        return stack.Pop();
     }
-
-    
-
-    // категории: буква, цифра, открыв скобка, закрыв скобка
-    // public string DecodeString(string s) {
-    //     char? prev = null;
-    //     var digits = new List<char>();
-
-    //     for (int i = 0; i < s.Lenght; i++) {
-    //         if (char.IsDigit(s[i])) {
-    //             digits.Add(s[i]);
-    //         }
-    //         prev = s[i];
-    //     }
-    // }
 }
