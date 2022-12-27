@@ -1,20 +1,9 @@
 # LeetCode
 
-Hello, here you can find my solutions for LeetCode problems.
-I started again on 18 of November 2022 and so far I solved 5 problems. And yep, I am too lazy to update this number.
+Hello, here you can find my solutions for LeetCode problems. My goal is to solve 1001 problems.
 
 ## My roadmap:
-- [x] Binary Search I (23 tasks; done on 29 of November)
-- [ ] Binary Search II (? tasks)
-- [ ] Binary Search III (? tasks)
-
-## Cheatsheet
-
-### List API
-- .Sort() // asc order
-
-### Math
-
-#### arithmetic progression
-- an = a1 + d *(n-1);
-- sn = ((a1 + an)/2)*n
+- [x] Binary Search I (23 tasks (16E/7M); done on 29.11.22)
+- [x] Leet Code 75 I (30 tasks (20E/10M); done on 19.12.22)
+- [x] Data Structure I (33 tasks (26E/7M); done on 26.12.22)
+- [ ] Programming Skills I (33 tasks (34E); started on 27.12.22)
