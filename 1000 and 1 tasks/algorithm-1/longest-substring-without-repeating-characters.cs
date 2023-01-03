@@ -19,7 +19,7 @@ public class Solution {
     public int LengthOfLongestSubstring(string s) {
         var max = 0;
 
-        for (int i = 0; i < s.Length - 1; i++) {
+        for (int i = 0; i < s.Length; i++) {
             for (int l = 1; (i + l) <= s.Length ; l++) {
                 var sub = s.Substring(i, l);
                 if (IsValid(sub)) {
