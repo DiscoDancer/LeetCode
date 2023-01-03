@@ -30,7 +30,8 @@ public class Solution {
         var max = 1;
 
         for (int i = 0; i < s.Length; i++) {
-            for (int l = max; (i + l) <= s.Length ; l++) {
+            // пробуем побить рекорд
+            for (int l = max + 1; (i + l) <= s.Length ; l++) {
                 var sub = s.Substring(i, l);
                 if (IsValid(sub)) {
                     max = Math.Max(max, l);
