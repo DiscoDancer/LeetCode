@@ -34,7 +34,7 @@ public class Solution {
             for (int l = max + 1; (i + l) <= s.Length ; l++) {
                 var sub = s.Substring(i, l);
                 if (IsValid(sub)) {
-                    max = Math.Max(max, l);
+                    max = l;
                 }
                 else {
                     break;
