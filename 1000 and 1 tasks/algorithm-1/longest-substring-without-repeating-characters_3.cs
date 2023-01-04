@@ -29,7 +29,7 @@ public class Solution {
             return 0;
         }
 
-        var max = 1;
+        var max = 0;
 
         for (int i = 0; i < s.Length; i++) {
             // пробуем побить рекорд
