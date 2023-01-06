@@ -14,6 +14,9 @@ public class Solution {
             if (cur.Count() == k) {
                 result.Add(cur);
             }
+            else if (cur.Count() > k) {
+                break;
+            }
             
             int i = 1;
             foreach (var p in pool) {
