@@ -13,9 +13,7 @@ public class Solution {
 
             if (cur.Count() == k) {
                 result.Add(cur);
-            }
-            else if (cur.Count() > k) {
-                break;
+                continue;
             }
             
             int i = 1;
