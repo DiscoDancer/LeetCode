@@ -14,6 +14,9 @@ public class Solution {
                         res[far] = Math.Min(res[far].Value, res[i].Value + 1);
                     }
                 }
+                else {
+                    break;
+                }
             }
         }
 
