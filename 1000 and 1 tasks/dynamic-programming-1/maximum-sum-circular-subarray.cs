@@ -17,6 +17,7 @@ public class Solution {
     }
 
     // n*n
+    // too slow
     public int MaxSubarraySumCircular(int[] nums) {
         var max = int.MinValue;
         for (int start = 0; start < nums.Length; start++) {
