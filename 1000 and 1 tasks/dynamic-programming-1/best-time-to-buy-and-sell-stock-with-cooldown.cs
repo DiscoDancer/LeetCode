@@ -1,4 +1,5 @@
 public class Solution {
+    // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/submissions/
     public int MaxProfit(int[] prices) {
         var held = int.MinValue;
         var sold = int.MinValue;
