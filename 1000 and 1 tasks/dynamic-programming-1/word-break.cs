@@ -32,12 +32,14 @@ public class Solution {
     }
 
     private bool Result {get; set;} = false;
+    private bool[] Mem {get; set; }
 
     private void Check(string s, int start) {
-        if (Result) {
+        if (Result || Mem[start]) {
             return;
         }
 
+        Mem[start] = true;
         var p = Root;
 
         for (int i = start; i < s.Length; i++) {
@@ -56,8 +58,10 @@ public class Solution {
     }
 
     public bool WordBreak(string s, IList<string> wordDict) {
+        Mem = new bool[s.Length];
         FillTrie(wordDict);
         Check(s, 0);
+        
 
         return Result;
     }
