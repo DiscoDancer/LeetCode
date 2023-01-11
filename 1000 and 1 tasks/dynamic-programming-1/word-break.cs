@@ -58,6 +58,7 @@ public class Solution {
     }
 
     public bool WordBreak(string s, IList<string> wordDict) {
+        // без меморизации считается по несколько раз и TL
         Mem = new bool[s.Length];
         FillTrie(wordDict);
         Check(s, 0);
