@@ -18,7 +18,7 @@ public class Solution {
         пример строк
                 Table = new int[Rows][];
         for (int i = 0; i < Rows; i++) {
-            Table[i] = new int[Rows + 1];
+            Table[i] = new int[Cols + 1];
             for (int j = 0; j < Cols; j++) {
                 Table[i][j+1] = Table[i][j] + mat[i][j];
             }
