@@ -1,7 +1,5 @@
 public class Solution {
     public int UniquePaths(int m, int n) {
-        var table = new int[m][];
-
         var prev = new int[n];
         for (int i = 0; i < n; i++) {
             prev[i] = 1;
