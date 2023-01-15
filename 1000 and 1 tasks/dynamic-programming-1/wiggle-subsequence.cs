@@ -1,5 +1,6 @@
 public class Solution {
 
+    // TL
     private int WiggleMaxLengthInner(int[] nums, int curIndex, int prev, bool? prevSign, int acc) {
         if (curIndex >= nums.Length) {
             return acc;
