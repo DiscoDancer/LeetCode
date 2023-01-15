@@ -11,14 +11,8 @@ public class Solution {
         int include = 0;
         int exclude = 0;
 
-        // может взять, можем не взять
-
-        // берем если нету
-        if (prevSign == null) {
-            include = WiggleMaxLengthInner(nums, curIndex + 1, cur, curSign, acc + 1);
-        }
-        // берем если другой знак
-        else if (prevSign != curSign) {
+        // берем
+        if ((cur != prev) && (prevSign == null || prevSign != curSign)) {
             include = WiggleMaxLengthInner(nums, curIndex + 1, cur, curSign, acc + 1);
         }
 
@@ -29,7 +23,7 @@ public class Solution {
     }
 
     public int WiggleMaxLength(int[] nums) {
-        if (nums.Length < 3) {
+        if (nums.Length == 1) {
             return nums.Length;
         }
 
