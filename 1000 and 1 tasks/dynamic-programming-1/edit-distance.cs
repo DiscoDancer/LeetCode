@@ -36,14 +36,6 @@ public class Solution {
     }
 
     public int MinDistance(string word1, string word2) {
-        if (word2.Length == 0) {
-            return word1.Length;
-        }
-        if (word1.Length == 0) {
-            return word2.Length;
-        }
-
-        // strings are not empty here
         Word2 = word2;
         return MinDistanceInner(word1.Select(x => x).ToList(), 0);
     }
