@@ -2,8 +2,6 @@ public class Solution {
     public IList<IList<int>> AllPathsSourceTarget(int[][] graph) {
         var result = new List<IList<int>>();
 
-        var visited = new bool[graph.Length];
-
         var queue = new Queue<List<int>>();
         queue.Enqueue(new List<int>() {0});
 
