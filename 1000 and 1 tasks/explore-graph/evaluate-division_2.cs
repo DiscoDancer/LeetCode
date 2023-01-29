@@ -31,6 +31,7 @@ public class Solution {
 
         // чтобы сложить нужен стек, потому что к примеру на первом шаге 5 умножений до конца, а на последнем 4
         // поэтому там рекурсия была в оригинале
+        // найти путь необсчитанных и пойти по нему с конца без while
         public (string node, double coef) Find(string x) {
             var cur = _root[x];
             while (cur.node != _root[cur.node].node) {
