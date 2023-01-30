@@ -17,6 +17,10 @@ public class Solution {
             return true;
         }
 
+        if (_visited[v]) {
+            return false;
+        }
+
         _visited[v] = true;
 
         foreach (var n in _edgeTable[v]) {
