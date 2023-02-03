@@ -1,3 +1,5 @@
+// Kurskal optimal
+
 public class Solution {
 
     public class Point {
