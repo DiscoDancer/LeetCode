@@ -1,4 +1,4 @@
-// Kurskal optimal
+// Kruskal's Algorithm optimal
 
 public class Solution {
 
