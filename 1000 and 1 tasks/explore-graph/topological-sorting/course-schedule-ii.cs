@@ -1,3 +1,4 @@
+// Kahn’s algorithm for Topological Sorting
 public class Solution {
     public int[] FindOrder(int numCourses, int[][] prerequisites) {
        var table = new (List<int> inV, List<int> outV)[numCourses];
