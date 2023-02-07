@@ -43,6 +43,8 @@ public class Solution {
         var queue = new Queue<char>();
         foreach (var k in table.Keys)
         {
+            // важный момент. Неопознанные буквы считаем за самые большие
+            // не обязательно так, в условии они могут быть в любом порядке
             if (!table[k].biggerList.Any())
             {
                 queue.Enqueue(k);
