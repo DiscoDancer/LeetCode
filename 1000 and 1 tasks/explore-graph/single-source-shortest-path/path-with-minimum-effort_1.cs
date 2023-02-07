@@ -3,6 +3,8 @@ public class Solution {
     // heights[row][col] represents the height of cell (row, col)
     // (0,0) -> (rows-1, columns-1)
     // ou can move up, down, left, or right
+
+    // SPFA
     public int MinimumEffortPath(int[][] heights) {
         var X = heights.Length;
         var Y = heights[0].Length;
