@@ -25,7 +25,6 @@ public class Solution {
         }
 
         var queue = new Queue<int>();
-        var result = new List<int>();
 
         var generation = new int[n];
         for (int i = 0; i < n; i++) {
@@ -34,31 +33,32 @@ public class Solution {
                 generation[i] = 1;
             }
             else {
-                generation[i] = -1;
+                generation[i] = 0;
             }
         }
 
+        var maxGen = edges.Any() ? 1 : 0;
+
         while (queue.Any()) {
             var cur = queue.Dequeue();
-            result.Add(cur);
 
             foreach (var neighbour in table[cur]) {
                 table[neighbour].Remove(cur);
                 if (table[neighbour].Count() == 1) {
                     generation[neighbour] = generation[cur] + 1;
+                    maxGen = Math.Max(maxGen, generation[neighbour]);
                     queue.Enqueue(neighbour);
                 }
             }
         }
 
-        var maxGen = generation[result.LastOrDefault()];
-        var superResult = new List<int>();
+        var result = new List<int>();
         for (int i =0; i < n; i++)  {
             if (generation[i] == maxGen) {
-                superResult.Add(i);
+                result.Add(i);
             }
         }
 
-        return superResult;
+        return result;
     }
 }
