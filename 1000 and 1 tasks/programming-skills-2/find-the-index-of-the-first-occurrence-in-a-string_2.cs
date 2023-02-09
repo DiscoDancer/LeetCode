@@ -26,9 +26,9 @@ public class Solution {
              if (i == 0) {
                  hashHay = HashValue(haystack.Substring(0, needle.Length), RADIX, MOD);
              } else {
-                var firstLetterHash = ((int) (haystack[(i - 1)] - 'a') * MAX_WEIGHT) % MOD;
-                var lastLetterHash = (int) (haystack[i + needle.Length - 1] - 'a') + MOD;
-                hashHay = ((hashHay * RADIX) % MOD - firstLetterHash + lastLetterHash) % MOD;
+                var oldLetterHash = ((haystack[(i - 1)] - 'a') * MAX_WEIGHT) % MOD;
+                var newLetterHash = haystack[i + needle.Length - 1] - 'a';
+                hashHay = ((hashHay * RADIX) % MOD - oldLetterHash + newLetterHash + MOD) % MOD;
              }
              if (hashHay == hashNeedle) {
                 for (int j = 0; j < needle.Length; j++) {
