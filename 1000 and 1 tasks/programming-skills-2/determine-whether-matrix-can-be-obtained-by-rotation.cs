@@ -13,7 +13,7 @@ public class Solution {
                 all0 = all0 && (mat[i][j] == target[i][j]);
                 all90 = all90 && (mat[i][j] == target[j][n-1-i]);
                 all180 = all180 && (mat[i][j] == target[n-1-i][n-1-j]);
-                all270 = all270 && (mat[i][j] == target[n-j-1][i]); // ok
+                all270 = all270 && (mat[i][j] == target[n-j-1][i]);
             }
         }
 
