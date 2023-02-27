@@ -1,5 +1,6 @@
 public class Solution {
     // немного копипасты отсюда: // https://leetcode.com/problems/kth-largest-element-in-an-array/editorial/
+    // хотят тут тоже самое: https://leetcode.com/problems/top-k-frequent-elements/editorial/
     public int[] TopKFrequent(int[] nums, int k) {
         var table = new Dictionary<int, int>();
         foreach (var n in nums) {
