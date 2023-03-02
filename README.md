@@ -12,6 +12,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Graph Theory I; 32 tasks (2E/28M/2H); done on 25.01.23
 - [x] Explore Graph; 26 tasks; done on 08.02.23
 - [x] Programming Skills II; 41(11E/20M) tasks; done on 27.02.23
-- [ ] Explore Heap; 11 tasks; started on 27.02.23
+- [x] Explore Heap; 12 tasks; started on done on 02.03.23
 
-Total: 296 (245 unique)
+Total: 308 (254 unique)
