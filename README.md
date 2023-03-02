@@ -11,7 +11,8 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Dynamic Programming I; 46 tasks (9E/35M/2H); done on 17.01.23
 - [x] Graph Theory I; 32 tasks (2E/28M/2H); done on 25.01.23
 - [x] Explore Graph; 26 tasks; done on 08.02.23
-- [x] Programming Skills II; 41(11E/20M) tasks; done on 27.02.23
-- [x] Explore Heap; 12 tasks; started on done on 02.03.23
+- [x] Programming Skills II; 41(11E/30M) tasks; done on 27.02.23
+- [x] Explore Heap; 12 tasks; done on 02.03.23
+- [ ] Leet Code 75 II; 45(11E/32M/2H) tasks; started on 02.03.23
 
 Total: 308 (254 unique)
