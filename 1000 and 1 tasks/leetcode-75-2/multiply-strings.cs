@@ -1,5 +1,7 @@
 public class Solution {
 
+    // если мы будем хранить строки как списки чисел в промежуточных операциях, то получим буст
+
     public string Multiply(string a, int b)
     {
         var surplus = 0;
