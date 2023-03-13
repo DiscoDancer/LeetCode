@@ -1,6 +1,6 @@
 public class Solution {
     // bfs дает сразу минимум
-    // таблица: stop => Buses
+    // таблица: stop => Buses(Routes)
     public int NumBusesToDestination(int[][] routes, int source, int target) {
         if (source == target) {
             return 0;
@@ -17,13 +17,13 @@ public class Solution {
             }
         }
 
-        // идем по автобусам
-        var visitedBuses = new HashSet<int[]>();
+        // идем по автобусам(маршрутам)
+        var visitedRoutes = new HashSet<int[]>();
         var queue = new Queue<(int[] route, int generation)>();
 
         foreach (var route in table[source]) {
             queue.Enqueue((route, 1));
-            visitedBuses.Add(route);
+            visitedRoutes.Add(route);
         }
 
         while (queue.Any()) {
@@ -33,7 +33,7 @@ public class Solution {
                     return generation;
                 }
                 foreach (var differentRoute in table[stop]) {
-                    if (visitedBuses.Add(differentRoute)) {
+                    if (visitedRoutes.Add(differentRoute)) {
                         queue.Enqueue((differentRoute, generation + 1));
                     }
                 }
