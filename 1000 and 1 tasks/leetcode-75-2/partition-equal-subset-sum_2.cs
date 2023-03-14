@@ -5,6 +5,7 @@ public class Solution {
 
     // https://leetcode.com/problems/partition-equal-subset-sum/editorial/
 
+    // суть в том, что нам достаточно найти только 1 половину, вторая = все остальное, поэтому ниже ||
     private bool F(int n, int subSetSum) {
         if (subSetSum == 0) {
             return true;
