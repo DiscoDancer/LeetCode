@@ -17,9 +17,10 @@ public class Solution {
     private List<int> Convert(int[] nums) {
         var list = new List<int>();
         for (int i = 0; i < nums.Length; i++) {
-            while (nums[i] > 0) {
+            var j = nums[i];
+            while (j > 0) {
                 list.Add(_candidates[i]);
-                nums[i]--;
+                j--;
             }
         }
 
