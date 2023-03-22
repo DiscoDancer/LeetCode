@@ -13,6 +13,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Graph; 26 tasks; done on 08.02.23
 - [x] Programming Skills II; 41(11E/30M) tasks; done on 27.02.23
 - [x] Explore Heap; 12 tasks; done on 02.03.23
-- [ ] Leet Code 75 II; 45(11E/32M/2H) tasks; started on 02.03.23
+- [x] Leet Code 75 II; 45(11E/32M/2H) tasks; done on 22.03.23
 
-Total: 308 (254 unique)
+Total: 353 (280 unique)
