@@ -13,6 +13,7 @@ public class Solution {
     // DFS BFS
 
     // можно в int
+    // backtracking
     private Dictionary<TreeNode, TreeNode> _parentByNode = new ();
 
     private void DFS(TreeNode root, TreeNode parent) {
