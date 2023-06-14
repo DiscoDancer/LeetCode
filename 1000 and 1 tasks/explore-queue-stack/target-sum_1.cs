@@ -3,7 +3,6 @@ public class Solution {
     private int[] _nums;
     private int _target;
 
-    // editorial
     private void F(int i, int sum) {
         if (i == _nums.Length) {
             if (sum == _target) {
@@ -17,9 +16,6 @@ public class Solution {
     }
 
     public int FindTargetSumWays(int[] nums, int target) {
-        if (nums.Length == 1) {
-            return nums[0] == target ? 1 : 0;
-        }
         _nums = nums;
         _target = target;
 
