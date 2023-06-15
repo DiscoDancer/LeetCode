@@ -16,7 +16,8 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Leet Code 75 II; 45(11E/32M/2H) tasks; done on 22.03.23
 - [x] Explore Array 101; 15 tasks; done on 09.04.23
 - [ ] Data Structure II; 51 tasks (11E/37M/2H); started on 09.04.23 (paused)
-- [x] Binary Tree; 14 tasks; done on 05.06.23
-- [x] Queue & Stack; 19 tasks; done on 15.06.23
+- [x] Explore Binary Tree; 14 tasks; done on 05.06.23
+- [x] Explore Queue & Stack; 19 tasks; done on 15.06.23
+- [ ] Explore Linked List; ? tasks; started on 15.06.23
 
 Total: 401 (306 unique)
