@@ -9,6 +9,8 @@
  *     }
  * }
  */
+
+ // editorial
 public class Solution {
     // расстояние до начала дикла = b
     // размер цикла = c
