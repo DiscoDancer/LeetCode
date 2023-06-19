@@ -18,6 +18,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [ ] Data Structure II; 51 tasks (11E/37M/2H); started on 09.04.23 (paused)
 - [x] Explore Binary Tree; 14 tasks; done on 05.06.23
 - [x] Explore Queue & Stack; 19 tasks; done on 15.06.23
-- [ ] Explore Linked List; ? tasks; started on 15.06.23
+- [x] Explore Linked List; 15 tasks; done on 19.06.23
 
-Total: 401 (306 unique)
+Total: 416 (309 unique)
