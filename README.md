@@ -19,5 +19,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Binary Tree; 14 tasks; done on 05.06.23
 - [x] Explore Queue & Stack; 19 tasks; done on 15.06.23
 - [x] Explore Linked List; 15 tasks; done on 19.06.23
+- [x] Explore Hash Table; ? tasks; started on 20.06.23
 
 Total: 416 (309 unique)
