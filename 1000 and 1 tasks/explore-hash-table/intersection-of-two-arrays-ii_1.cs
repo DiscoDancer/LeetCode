@@ -1,7 +1,7 @@
 public class Solution {
     public int[] Intersect(int[] nums1, int[] nums2) {
         if (nums1.Length > nums2.Length) {
-            Intersect(nums2, nums1);
+            return (nums2, nums1);
         }
 
         var arr1 = nums1.OrderBy(x => x).ToArray();
