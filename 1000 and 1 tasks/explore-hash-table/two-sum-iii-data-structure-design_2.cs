@@ -1,3 +1,4 @@
+// editorial
 public class TwoSum {
 
     private Dictionary<int, int> _table = new ();
