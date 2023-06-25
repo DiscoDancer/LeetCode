@@ -2,6 +2,8 @@ public class Solution {
     // собрать все возможные суммы за квадрат и положить в табличку
     // пройти по табличке поискать вторую половину
     // собрать все результаты и отфильтровать
+
+    // TL
     public IList<IList<int>> FourSum(int[] nums, int target) {
         if (nums.Length < 4) {
             return new List<IList<int>>();;
