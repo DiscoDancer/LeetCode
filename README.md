@@ -21,4 +21,4 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Linked List; 15 tasks; done at19.06.23
 - [x] Explore Hash Table; 25 tasks; done at26.06.23
 
-Total: 322 (309 unique)
+Total: 441 (322 unique)
