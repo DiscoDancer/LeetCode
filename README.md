@@ -20,6 +20,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Queue & Stack; 19 tasks; done at 15.06.23
 - [x] Explore Linked List; 15 tasks; done at 19.06.23
 - [x] Explore Hash Table; 25 tasks; done at 26.06.23
-- [ ] Explore Array & String; ? tasks; started at 29.6.23
+- [x] Explore Array & String; 22 tasks; done at 3.7.23
 
-Total: 441 (322 unique)
+Total: 463 (322 unique)
