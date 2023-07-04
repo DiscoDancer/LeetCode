@@ -21,5 +21,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Linked List; 15 tasks; done at 19.06.23
 - [x] Explore Hash Table; 25 tasks; done at 26.06.23
 - [x] Explore Array & String; 22 tasks; done at 3.7.23
+- [ ] Explore N-ary Tree; ? tasks; started at 4.7.23
 
 Total: 463 (322 unique)
