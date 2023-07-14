@@ -1,4 +1,5 @@
 public class Solution {
+    // out of memory
     public int KthGrammar(int n, int k) {
         var str = "0";
 
