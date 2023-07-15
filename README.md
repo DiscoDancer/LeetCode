@@ -24,5 +24,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore N-ary Tree; 6 tasks; done at 5.7.23
 - [x] Explore Trie; 9 tasks; done at 12.7.23
 - [x] Explore Recursive I; 12 tasks; done at 14.7.23
+- [ ] Explore Recursive II; ? tasks; started at 15.7.23
 
 Total: 490 (344 unique)
