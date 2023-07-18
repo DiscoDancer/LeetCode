@@ -1,14 +1,11 @@
 public class Solution {
-
-
-    // 2 проблемы: квадрат и как остановиться
-
     private char[][] _board;
     private bool _found = false;
+    // они нужны потом, что если в конце цифры уже были, то мы закончим раньше
     private int _countMissing = 0;
 
     private void F(int index) {
-        if (_found) {
+        if (_countMissing == 0) {
             return;
         }
 
@@ -52,20 +49,16 @@ public class Solution {
             _board[row][col] = possibleValue;
             _countMissing--;
             if (_countMissing == 0) {
-                _found = true;
                 return;
             }
             F(index+1);
             // важно не перекрывать результат
-            if (_found) {
+            if (_countMissing == 0) {
                 return;
             }
             _board[row][col] = '.';
             _countMissing++;
         }
-
-
-
     }
 
     // Полный перебор был BFS, но нужно хранить доску
@@ -79,7 +72,6 @@ public class Solution {
                 }
             }
         }
-
 
         _board = board;
 
