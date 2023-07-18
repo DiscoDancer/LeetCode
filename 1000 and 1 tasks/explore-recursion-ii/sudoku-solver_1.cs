@@ -1,6 +1,5 @@
 public class Solution {
     private char[][] _board;
-    private bool _found = false;
     // они нужны потом, что если в конце цифры уже были, то мы закончим раньше
     private int _countMissing = 0;
 
