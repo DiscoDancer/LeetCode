@@ -29,7 +29,6 @@ public class Solution {
         var max = 0;
         for (int i = 0; i < heights.Length; i++)
         {
-            max = Math.Max(max, heights[i]);
             max = Math.Max(max, heights[i] * (lessFromRight[i] - lessFromLeft[i] + 1));
         }
 
