@@ -14,7 +14,6 @@ public class Solution {
                 p--;
             }
         }
-
         lessFromLeft[0] = 0;
 
         for (int i = 0; i < heights.Length-1; i++) {
