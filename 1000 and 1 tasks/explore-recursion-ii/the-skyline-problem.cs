@@ -5,6 +5,7 @@ public class Solution {
         // список текущих зданий
 
         var start = buildings.First()[0];
+        // неправильно ищу
         var end = buildings.Last()[1];
         
         var result = new List<IList<int>>();
