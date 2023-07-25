@@ -27,6 +27,7 @@ public class Solution {
         return _mem[(numsL, numsR, multiIndex)];
     }
 
+    // passes
     public int MaximumScore(int[] nums, int[] multipliers) {
         _multipliers = multipliers;
         _nums = nums;
