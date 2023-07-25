@@ -22,6 +22,7 @@ public class Solution {
         return _mem[i,j];
     }
 
+    // passes
     public int LongestCommonSubsequence(string text1, string text2) {
         _text1 = text1;
         _text2 = text2;
