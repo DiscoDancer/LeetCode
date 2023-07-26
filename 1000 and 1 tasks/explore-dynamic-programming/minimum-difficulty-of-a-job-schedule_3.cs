@@ -36,6 +36,7 @@ public class Solution {
         }
     }
 
+    // stil TL
     public int MinDifficulty(int[] jobDifficulty, int d) {
         if (d > jobDifficulty.Length) {
             return -1;
