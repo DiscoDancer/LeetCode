@@ -8,26 +8,16 @@ public class Solution {
 
         // ничего не куплено, можем либо купить, либо не купить
         if (boughtPrice == -1) {
-            if (trCount < 4) {
-                // купили
-                var a = F(dayIndex+1, _prices[dayIndex], trCount + 1) - _prices[dayIndex];
-                // не купили
-                var b = F(dayIndex+1, boughtPrice, trCount);
-                return Math.Max(a, b);
-            }
-            else {
-                return F(dayIndex+1, boughtPrice, trCount);
-            }
+            // купили
+            var a = F(dayIndex+1, _prices[dayIndex], trCount + 1) - _prices[dayIndex];
+            // не купили
+            var b = F(dayIndex+1, boughtPrice, trCount);
+            return Math.Max(a, b);
         }
         // математически видно, про продать и купить в тот же день, ничего не дает
         else {
-            int a = int.MinValue;
-
-            if (trCount < 4) {
-                a = F(dayIndex+1, -1, trCount + 1) + _prices[dayIndex];
-            }
+            var a = F(dayIndex+1, -1, trCount + 1) + _prices[dayIndex];
             var b = F(dayIndex+1, boughtPrice, trCount);
-
             return Math.Max(a, b);
         }
     }
