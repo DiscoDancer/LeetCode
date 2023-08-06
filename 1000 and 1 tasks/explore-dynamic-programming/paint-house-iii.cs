@@ -15,6 +15,8 @@ public class Solution {
 
     // пусть score тоже считается заново
 
+    // попробовать меморизацию от 3х
+
     private void F(int houseIndex, int prevColor, int currentScore, int currentSum) {
         // дошли до конца, выходим
         if (houseIndex == _m) {
@@ -37,9 +39,6 @@ public class Solution {
         
         // крашу
         for (int color = 1; color <= _n; color++) {
-            if (color == _houses[houseIndex]) {
-                continue;
-            }
             var inc = color == prevColor ? 0 : 1;
             F(houseIndex+1, color, currentScore + inc, currentSum + _cost[houseIndex][color-1]);
         }
