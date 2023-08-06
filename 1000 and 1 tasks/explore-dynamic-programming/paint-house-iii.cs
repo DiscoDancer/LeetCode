@@ -25,6 +25,9 @@ public class Solution {
             }
             return;
         }
+        if (currentScore > _target) {
+            return;
+        }
 
         
         // могу покрасить, могу не покрасить
