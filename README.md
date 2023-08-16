@@ -26,5 +26,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Recursive I; 12 tasks; done at 14.7.23
 - [x] Explore Recursive II; 17 tasks; done at 22.7.23
 - [x] Explore Dynamic Programming; 35 tasks; done at 13.8.23
+- [ ] Explore Bit Manipulation; ? tasks; started at 16.8.23
 
-Total: 542 (372 unique)
+Total: at least 542 (372 unique)
