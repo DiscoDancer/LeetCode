@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/maximum-students-taking-exam/solutions/503686/a-simple-tutorial-on-this-bitmasking-problem/
 public class Solution {
     public static void FillArray(int[,] array, int val)
     {
