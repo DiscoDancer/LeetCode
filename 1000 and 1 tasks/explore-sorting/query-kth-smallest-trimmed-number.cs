@@ -45,6 +45,8 @@ public class Solution {
             for (int j = 0; j < nums.Length; j++){
                 if (nums[j] == sortedArrays[queries[i][1]][queries[i][0]-1]){
                     subRes = j;
+                    // это нужно, чтобы мы всегда последний не писали в ответ
+                    // иначе не пройдет тест кейс, где все цифры одинаковые
                     numOfEqualsDigits++;
                     if (numOfEqualsDigits == queries[i][0]) break;
                 }
