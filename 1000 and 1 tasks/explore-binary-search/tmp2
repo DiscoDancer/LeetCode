@@ -1,0 +1,31 @@
+public class Solution {
+    private int[] _nums;
+    private int _min;
+
+    private void F(int l, int r) {
+        if (r < l) return;
+        if (l < 0 || r < 0) return;
+
+        var m = l + (r-l)/2;
+        _min = Math.Min(_min, _nums[m]);
+
+        if (m - 1 != r)
+        {
+            F(l,m);
+        }
+
+        if (m - 1 != l)
+        {
+            F(m,r); 
+        }
+    }
+
+    public int FindMin(int[] nums) {
+        _nums = nums;
+        _min = nums[0];
+
+        F(0, nums.Length - 1);
+
+        return _min;
+    }
+}
