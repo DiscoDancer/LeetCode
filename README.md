@@ -29,5 +29,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Bit Manipulation; 12 tasks; done at 29.8.23
 - [x] Explore Sorting; 9 tasks; done at 6.9.23
 - [x] Explore Binary Search; 22 tasks; done at 20.9.23
+- [ ] Explore Binary Search Tree; ? tasks; start at 20.9.23
 
 Total: at least 585 (394 unique)
