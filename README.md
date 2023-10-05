@@ -31,5 +31,6 @@ Hello, here you can find my solutions for LeetCode problems. My goal is to solve
 - [x] Explore Binary Search; 22 tasks; done at 20.9.23
 - [x] Explore Binary Search Tree; 11 tasks; done at 26.9.23
 - [x] New Programming Skills; 49 tasks; done at 5.10.23
+- [ ] New Leet Code 75; ? tasks; started at 5.10.23
 
 Total: at least 645 (412 unique)
