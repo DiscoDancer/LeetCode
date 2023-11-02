@@ -29,6 +29,7 @@ public class Solution {
         }
         else {
             var m = l + (r-l)/2;
+            // тут можно отсекать 
             Search(l, m);
             Search(m+1,r);
         }
