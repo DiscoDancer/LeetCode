@@ -10,15 +10,25 @@ public class Solution {
             return h >= minReuired;               
     }
 
-    // TL
     public int MinEatingSpeed(int[] piles, int h) {
         var maxSpeed = piles.Max();
-        for (int speed = 1; speed <= maxSpeed; speed++) {
-            if (IsSpeedEnough(piles, h, speed)) {
-                return speed;
+        
+        var l = 1;
+        var r = maxSpeed;
+
+        while (l <= r) {
+            var m = l + (r-l)/2;
+            var isMEnough = IsSpeedEnough(piles, h, m);
+            if (isMEnough) {
+                r = m - 1;
+            }
+            else {
+                l = m + 1;
             }
         }
 
-        return -1;
+
+
+        return l;
     }
 }
