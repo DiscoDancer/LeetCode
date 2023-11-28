@@ -19,7 +19,6 @@ public class Solution {
             // j == _target.Length
             else {
                 // finish
-                // _min = Math.Min(_min, score);
                 return score;
             }
         }
