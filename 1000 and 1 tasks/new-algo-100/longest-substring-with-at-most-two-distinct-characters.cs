@@ -1,10 +1,5 @@
-using System.Text;
-
-namespace ConsoleApp1;
-
-public class CurTask
-{
-    public int LengthOfLongestSubstringTwoDistinct(string s)
+public class Solution {
+ public int LengthOfLongestSubstringTwoDistinct(string s)
     {
         var table = new Dictionary<char, List<int>>();
         var list = new List<char>();
@@ -20,7 +15,7 @@ public class CurTask
             {
                 prevCount++;
             }
-            if (prev != '1' && (c != prev || i == s.Length - 1))
+            if (prev != '1' && c != prev )
             {
                 while (!(table.ContainsKey(prev) || table.Keys.Count() < 2))
                 {
