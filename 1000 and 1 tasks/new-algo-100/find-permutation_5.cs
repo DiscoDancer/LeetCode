@@ -1,0 +1,38 @@
+public class Solution {
+    // wiggle sort
+    // создать массив от 1 до n и менять местами рассматривая по несколько (2-3)
+    // комбинации могут быть II, ID, DD, DI; Нет, потому что не сработает для DDDDDDDD
+    // если читать с конца
+    // просто захватывать предыдущий
+
+
+    // суть в том, что I - это прямой подярок, а D обратный
+    // но, чтобы не нарушалось прошлое условие, нам нужно забирать последее значение и работать с ним
+    public int[] FindPermutation(string s) {
+        var rdyQueue = new List<int>() {1};
+        var nextValue = 2;
+
+        for (int i = 0; i < s.Length; ) {
+            if (s[i] == 'I') {
+                while (i < s.Length && s[i] == 'I') {
+                    rdyQueue.Add(nextValue++);
+                    i++;
+                }
+            }
+            else if (s[i] == 'D') {
+                var buffer = new Stack<int>();
+                buffer.Push(rdyQueue.Last());
+                rdyQueue.RemoveAt(rdyQueue.Count()-1);
+                while (i < s.Length && s[i] == 'D') {
+                    buffer.Push(nextValue++);
+                    i++;
+                }
+                while (buffer.Any()) {
+                    rdyQueue.Add(buffer.Pop());
+                }
+            }
+        }
+
+        return rdyQueue.ToArray();
+    }
+}
