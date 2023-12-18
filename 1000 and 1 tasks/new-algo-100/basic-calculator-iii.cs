@@ -157,8 +157,6 @@ public class Solution {
                 list.Add((int.Parse(sb.ToString()), Constant));
                 i--;
             }
-            // TODO этого мало, нужно смотреть следующую операцию. Потому что рекурсивно могут сократиться
-            // ResolveList(list, i == s.Length - 1 ? null : s[i+1]);
         }
 
         while (list.Count() != 1) {
