@@ -41,7 +41,7 @@ public class FirstUnique
     }
 
 
-    // O(log(n))
+    // O(1) !!!
     public void Add(int n)
     {
         if (!_tableCount.ContainsKey(n))
