@@ -8,6 +8,7 @@
  */
 
 public class Solution {
+    // editorial
     public void PrintLinkedListInReverse(ImmutableListNode head) {
         ImmutableListNode curr;
         ImmutableListNode end = null;
