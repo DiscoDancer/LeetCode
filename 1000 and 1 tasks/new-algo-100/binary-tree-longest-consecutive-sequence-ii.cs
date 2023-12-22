@@ -12,6 +12,7 @@
  * }
  */
 public class Solution {
+    // based on binary-tree-longest-consecutive-sequence-i
     public int LongestConsecutive(TreeNode root) {
         var parentTable = new Dictionary<TreeNode, TreeNode>();
         var incChildrenTable = new Dictionary<TreeNode, int>();
