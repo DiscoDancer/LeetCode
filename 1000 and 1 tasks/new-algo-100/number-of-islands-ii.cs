@@ -10,7 +10,7 @@ public class Solution {
             - соседи есть, id островов разные -> merge aliases
     */
 
-
+    // out of mem
 
     public class Island {
         public Island(int alias) {
