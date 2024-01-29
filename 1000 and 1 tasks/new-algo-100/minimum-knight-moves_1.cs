@@ -6,7 +6,8 @@ public class Solution {
         visited.Add((0, 0));
 
         var initialDist = Math.Sqrt(x * x + y * y);
-        const int threshold = 100;
+        // подобрал руками
+        const int threshold = 2;
 
         var queue = new Queue<(int x, int y, int d)>();
         queue.Enqueue((0, 0, 0));
