@@ -48,7 +48,7 @@ public class Solution {
     {
         _k = k;
         var chars = s.ToCharArray().ToList();
-        var positions = new int?[s.Length];
+        var positions = new int?[26];
         Generate(new StringBuilder(), chars, positions);
 
         return _result;
