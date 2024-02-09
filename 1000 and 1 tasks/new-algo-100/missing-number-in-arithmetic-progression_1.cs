@@ -1,6 +1,7 @@
 public class Solution {
     // Math
     // нужно min1, min2, min3 тогда найдем d
+    // PS мое решение не требует сортировки!
     public int MissingNumber(int[] arr) {
         var min1 = int.MaxValue;
         var min2 = int.MaxValue;
