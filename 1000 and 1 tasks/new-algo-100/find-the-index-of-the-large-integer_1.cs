@@ -21,10 +21,12 @@ class Solution {
 
         while (L <= R)
         {
+            // базовый кейс: длина 1
             if (L == R)
             {
                 return L;
             }
+            // базовый кейс: длина 2
             if (R - L == 1)
             {
                 var cmp = reader.CompareSub(L, L, R, R);
@@ -39,6 +41,7 @@ class Solution {
                 
                 return -1;
             }
+            // длина 3+
             else
             {
                 var M = L + (R-L)/2;
