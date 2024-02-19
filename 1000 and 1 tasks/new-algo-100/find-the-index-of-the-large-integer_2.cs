@@ -1,0 +1,82 @@
+/**
+ * // This is ArrayReader's API interface.
+ * // You should not implement it, or speculate about its implementation
+ * class ArrayReader {
+ *     // Compares the sum of arr[l..r] with the sum of arr[x..y] 
+ *     // return 1 if sum(arr[l..r]) > sum(arr[x..y])
+ *     // return 0 if sum(arr[l..r]) == sum(arr[x..y])
+ *     // return -1 if sum(arr[l..r]) < sum(arr[x..y])
+ *     public int CompareSub(int l, int r, int x, int y) {}
+ *
+ *     // Returns the length of the array
+ *     public int Length() {}
+ * }
+ */
+
+class Solution {
+    public int GetIndex(ArrayReader reader) {
+        var length = reader.Length();
+        var L = 0;
+        var R = length - 1;
+
+        while (L <= R)
+        {
+            // базовый кейс: длина 1
+            if (L == R)
+            {
+                return L;
+            }
+            // базовый кейс: длина 2
+            if (R - L == 1)
+            {
+                var cmp = reader.CompareSub(L, L, R, R);
+                if (cmp == 1)
+                {
+                    return L;
+                }
+                if (cmp == -1)
+                {
+                    return R;
+                }
+                
+                return -1;
+            }
+            // длина 3+
+            else
+            {
+                var M = L + (R-L)/2;
+                var leftSize = (M - 1) - L;
+                var rightSize = (R) - (M + 1);
+                // если слева и справа длина одинаковая, то середину включать не надо
+                if (leftSize == rightSize)
+                {
+                    var cmp = reader.CompareSub(L, M-1, M + 1, R);
+                    if (cmp == 0) {
+                        return M;
+                    }
+                    if (cmp == 1) {
+                        R = M -1;
+                    }
+                    else if (cmp == -1) {
+                        L = M + 1;
+                    }
+                }
+                // иначе включаем туда, где меньшее количество
+                else
+                {
+                    var cmp = leftSize < rightSize ? reader.CompareSub(L, M, M + 1, R) : reader.CompareSub(L, M-1, M, R);
+                    if (cmp == 1)
+                    {
+                        R = M;
+                    }
+                    else
+                    {
+                        L = M;
+                    }
+                }
+            }
+        }
+        
+        return -1;
+    }
+}
