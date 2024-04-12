@@ -18,7 +18,7 @@ public class Solution {
 
         var result = false;
 
-        for (int j = 1; j <= _nums[i]; j++) {
+        for (int j = 1; j <= _nums[i] && !result; j++) {
             result = result || F(i+j);
         }
 
