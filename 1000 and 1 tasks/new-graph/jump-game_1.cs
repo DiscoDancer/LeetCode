@@ -6,9 +6,6 @@ public class Solution {
     private bool?[] _mem;
 
     private bool F(int i) {
-        if (i >= _nums.Length ) {
-            return false;
-        }
         if (i == _nums.Length - 1) {
             return true;
         }
