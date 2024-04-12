@@ -18,7 +18,7 @@ public class Solution {
 
         var result = false;
 
-        for (int j = 1; j <= _nums[i] && !result; j++) {
+        for (int j = 1; j <= _nums[i] && !result && j + i < _nums.Length; j++) {
             result = result || F(i+j);
         }
 
