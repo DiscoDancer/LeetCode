@@ -5,12 +5,10 @@ public class Solution {
         table[s.Length - 1] = true;
 
         for (int index = s.Length - 2; index >= 0; index--) {
-            var result = false;
-            for (int i = _minJump; i <= _maxJump && index + i < _s.Length; i++) {
-                if (_s[index + i ] != '0') continue;
-                result |= table[index + i];
+            for (int i = minJump; i <= maxJump && index + i < s.Length; i++) {
+                if (s[index + i ] != '0') continue;
+                table[index] |= table[index + i];
             }
-            table[index] = result;
         }
 
         return table[0];
