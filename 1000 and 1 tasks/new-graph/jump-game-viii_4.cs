@@ -12,7 +12,7 @@ public class Solution {
                 if (nums[i] > maxK && nums[i] <= nums[j]) {
                     minCosts[j] = Math.Min(minCosts[j], minCosts[i] + costs[j]);
                 }
-                if (nums[i] > nums[j] && minK >= nums[i]) {
+                if (minK >= nums[i] && nums[i] > nums[j]) {
                     minCosts[j] = Math.Min(minCosts[j], minCosts[i] + costs[j]);
                 }  
                 minK = Math.Min(minK, nums[i]);
