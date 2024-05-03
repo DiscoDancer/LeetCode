@@ -6,8 +6,6 @@ public class Solution {
         public int[] _rank;
         public int[] _size;
 
-        public int _max = int.MinValue;
-
         public UnionFind(int[][] grid)
         {
             var X = grid.Length;
