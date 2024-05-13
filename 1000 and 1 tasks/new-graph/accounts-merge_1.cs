@@ -39,6 +39,7 @@ public class Solution {
                 return;
             }
 
+            // надо использовать root, а не сами переменные!
             if (_rank[x] > _rank[y])
             {
                 _root[rootY] = rootX;
