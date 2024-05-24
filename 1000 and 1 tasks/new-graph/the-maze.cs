@@ -30,7 +30,7 @@ public class Solution {
             
             var xt = x;
             var yt = y;
-            while (xt > 0  && maze[xt - 1][yb] == 0)
+            while (xt > 0  && maze[xt - 1][yt] == 0)
             {
                 xt--;
             }
