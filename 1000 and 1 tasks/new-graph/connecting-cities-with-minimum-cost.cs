@@ -55,7 +55,7 @@ public class Solution {
 
         var queue = new PriorityQueue<(int x, int y, int c), int>();
         foreach (var xyc in connections) {
-            var x = xyc[0] - 1;
+            var x = xyc[0] - 1; // потому что 0 и 1 based
             var y = xyc[1] - 1;
             var c = xyc[2];
             queue.Enqueue((x,y,c), c);
