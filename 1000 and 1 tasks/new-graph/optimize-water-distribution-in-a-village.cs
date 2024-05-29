@@ -1,7 +1,9 @@
 public class Solution {
     public class UnionFind {
         public int[] _root;
+        // когда мы расширяем наш кластер нам важно хранить минимальный колодец от которого мы запустимся
         public int[] _minWell;
+        // храним сумму труб в кластере
         public int[] _pipeCost;
 
         public UnionFind(int n, int[] wells) {
@@ -78,6 +80,8 @@ public class Solution {
             var costX = uf._minWell[rootX] + uf._pipeCost[rootX];
             var costY = uf._minWell[rootY] + uf._pipeCost[rootY];
 
+            // мы проверяем, что выгоднее иметь 2 раздельных ксластера колодцев или соединить их
+            // очевидно, что при соединении трубы остаются, а один из колодцев уходит. Смотрим проверяем оба.
             if (costX + costY > c + uf._minWell[rootX] + uf._pipeCost[rootX] + uf._pipeCost[rootY])
             {
                 uf.Union(rootX, rootY, c);
