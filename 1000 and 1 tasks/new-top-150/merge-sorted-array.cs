@@ -1,3 +1,5 @@
+// editorial
+
 public class Solution {
     public void Merge(int[] nums1, int m, int[] nums2, int n) {
         // Set p1 and p2 to point to the end of their respective arrays.
