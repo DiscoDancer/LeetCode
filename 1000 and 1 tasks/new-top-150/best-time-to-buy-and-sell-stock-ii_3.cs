@@ -19,6 +19,6 @@ public class Solution {
             }
         }
 
-        return table[0, 0];
+        return table[0, YES];
     }
 }
