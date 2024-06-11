@@ -1,5 +1,8 @@
 // editorial
 // работает в предположении, что по индексу берем за константу
+// все потому что в оригинале используется Java ArrayList, а он на самом деле динамический массив, а не список
+// и у него показатели insert o(1)* delete o(n) index o(1)
+
 public class RandomizedSet {
 
     private List<int> _list = new ();
