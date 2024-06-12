@@ -2,6 +2,7 @@ public class Solution {
     private int[] _gas;
     private int[] _cost;
 
+    // ее нужно свести к F(start, end): bool и меморизировать
     private bool Check(int startIndex) {
         var n = _gas.Length;
         var balance = 0;
