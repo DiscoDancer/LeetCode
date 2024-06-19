@@ -3,6 +3,8 @@ public class Solution {
         var n = height.Length;
         var sum = 0;
 
+        // префиксные суммы и maxim стек могу довести до  линейки
+
         for (int i = 1; i < n - 1; i++) {
             if (height[i - 1] > height[i]) {
                 var leftWallIndex = i - 1;
