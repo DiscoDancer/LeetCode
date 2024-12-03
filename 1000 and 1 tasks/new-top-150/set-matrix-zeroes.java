@@ -1,4 +1,3 @@
-// один while все равно напрягает
 public class Solution {
     public void setZeroes(int[][] matrix) {
         var prevLineHasZero = false;
@@ -9,6 +8,8 @@ public class Solution {
                 if (matrix[i][j] == 0) {
                     thisLineHasZero = true;
 
+                    // один while все равно напрягает
+                    // но нельзя тормозить по нулю, потому что 0 может быть получен из-за строки
                     var itop = i - 1;
                     while (itop >= 0) {
                         matrix[itop--][j] = 0;
