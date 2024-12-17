@@ -33,17 +33,17 @@ class Solution {
             if (bufferSize == k || next == null) {
                 if (bufferSize == k) {
                     // reverse
-                    var reversedHead = fakeHeadBufferHead.next;
-                    fakeHeadGlobalTail.next = reverse(reversedHead);
-                    fakeHeadGlobalTail = reversedHead;
+                    var beforeReverseHead = fakeHeadBufferHead.next;
+                    fakeHeadGlobalTail.next = reverse(beforeReverseHead);
+                    fakeHeadGlobalTail = beforeReverseHead;
 
                     fakeHeadBufferHead = new ListNode(-1);
                     fakeHeadBufferTail = fakeHeadBufferHead;
                     bufferSize = 0;
                 } else {
                     // not reverse
-                    var reversedHead = fakeHeadBufferHead.next;
-                    fakeHeadGlobalTail.next = reversedHead;
+                    var beforeReverseHead = fakeHeadBufferHead.next;
+                    fakeHeadGlobalTail.next = beforeReverseHead;
 
                 }
             }
