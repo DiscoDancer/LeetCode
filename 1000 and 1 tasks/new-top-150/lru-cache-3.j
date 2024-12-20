@@ -57,11 +57,7 @@ class LRUCache {
         else if (map.size() < capacity) {
             var newNode = new Node(key, value);
 
-            var lastPrev = this.tail.prev;
-            lastPrev.next = newNode;
-            newNode.prev = lastPrev;
-            newNode.next = this.tail;
-            this.tail.prev = newNode;
+            addToListEnd(newNode);
             map.put(key, newNode);
         }
         else {
