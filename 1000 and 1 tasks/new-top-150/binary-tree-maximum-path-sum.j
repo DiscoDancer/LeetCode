@@ -37,9 +37,6 @@ class Solution {
 
     // root never null
     public int maxPathSum(TreeNode root) {
-
-        // todo wrap the tree
-
         Queue<CustomTreeNode> queue = new LinkedList<>();
         CustomTreeNode customRoot = new CustomTreeNode(root, null);
         queue.add(customRoot);
@@ -81,7 +78,7 @@ class Solution {
                 maxValue = Math.max(maxValue, currentMaxPathSum);
             }
 
-            // try to take on of the children
+            // try to take one of the children
             var maxGain = 0;
             if (current.left != null && current.left.visited) {
                 maxGain = Math.max(maxGain, current.left.maxPathSum);
@@ -90,17 +87,15 @@ class Solution {
                 maxGain = Math.max(maxGain, current.right.maxPathSum);
             }
             current.maxPathSum = current.maxPathSum + maxGain;
+            maxValue = Math.max(maxValue, current.maxPathSum);
 
             // try to add parent to queue
             var parent = current.parent;
             if (parent != null && (parent.left == null || parent.left.visited) && (parent.right == null || parent.right.visited)) {
                 leafQueue.add(current.parent);
             }
-
-            maxValue = Math.max(maxValue, current.maxPathSum);
         }
-
-
+        
         return maxValue;
     }
 }
