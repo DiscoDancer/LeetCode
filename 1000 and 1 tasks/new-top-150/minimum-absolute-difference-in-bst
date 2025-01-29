@@ -1,0 +1,42 @@
+import java.util.Stack;
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+
+
+    public int getMinimumDifference(TreeNode root) {
+        // do inorder
+        var min = Integer.MAX_VALUE;
+
+        TreeNode prev = null;
+        var stack = new Stack<TreeNode>();
+        var current = root;
+        while (!stack.isEmpty() || current != null) {
+            while (current != null) {
+                stack.push(current);
+                current = current.left;
+            }
+            current = stack.pop();
+            if (prev != null) {
+                min = Math.min(min, Math.abs(current.val - prev.val));
+            }
+            prev = current;
+            current = current.right;
+        }
+        return min;
+    }
+}
