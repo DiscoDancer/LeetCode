@@ -30,17 +30,14 @@ class Solution {
         while (!queue.isEmpty()) {
             var x = queue.poll();
             coursesTaken++;
-            if (xIsRequiredByYs.containsKey(x)) {
-                for (var y : xIsRequiredByYs.get(x)) {
-                    forXRequireYs.put(y, forXRequireYs.get(y) - 1);
-                    if (forXRequireYs.get(y) == 0) {
-                        queue.add(y);
-                    }
+            for (var y : xIsRequiredByYs.get(x)) {
+                forXRequireYs.put(y, forXRequireYs.get(y) - 1);
+                if (forXRequireYs.get(y) == 0) {
+                    queue.add(y);
                 }
             }
         }
-
-
+        
         return coursesTaken == numCourses;
     }
 }
