@@ -11,8 +11,8 @@ class Solution {
 
         int level = 0;
         while (!queue.isEmpty()) {
-            var size = queue.size();
-            for (int i = 0; i < size; i++) {
+                var size = queue.size();
+                for (int i = 0; i < size; i++) {
                 var gene = queue.poll();
                 if (gene.equals(endGene)) {
                     return level;
