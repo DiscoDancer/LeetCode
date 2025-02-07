@@ -121,7 +121,7 @@ class Solution {
         for (var x = 0; x < X; x++) {
             for (var y = 0; y < Y; y++) {
                 var matchOrDefault = _trie.root.children.getOrDefault(board[x][y], null);
-                if (matchOrDefault != null) {
+                if (matchOrDefault != null && matchOrDefault.count > 0) {
                     visited[x][y] = true;
                     F(x, y, matchOrDefault, visited, Direction.START);
                     visited[x][y] = false;
