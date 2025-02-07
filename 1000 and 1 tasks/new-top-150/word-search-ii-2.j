@@ -129,6 +129,6 @@ class Solution {
             }
         }
 
-        return _result.stream().toList();
+        return _result;
     }
 }
