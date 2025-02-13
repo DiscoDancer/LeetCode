@@ -37,6 +37,7 @@ class Solution {
             head = head.next.next;
         }
         var mid = midPrev.next;
+        // вся суть здесь, потому что списки разделяются на 2 независимых!!!
         midPrev.next = null;
         return mid;
     }
