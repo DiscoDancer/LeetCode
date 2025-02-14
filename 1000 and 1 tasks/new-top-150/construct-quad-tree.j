@@ -25,7 +25,7 @@ class Solution {
     }
 
     private Node F(int x0, int y0, int size) {
-        if (size < 1) {
+        if (size == 0) {
             return null;
         }
         if (size == 1) {
@@ -34,8 +34,10 @@ class Solution {
 
         var above = CalcAbove(x0, y0, size);
         var left = CalcLeft(x0, y0, size);
+        // нужно именно по хn и уn смотреть, потому что если x0 будет 0 и y0 будет 0, не пересечений, ни слева, ни сверху не будет
         var full_xn_yn = sums[x0 + size - 1][y0 + size - 1];
         var intersection = CalcIntersection(x0, y0);
+        // формула интуитивная если нарисовать квадратики
         var sum = full_xn_yn - above - left + intersection;
 
         var isStop = sum == size * size || sum == 0;
