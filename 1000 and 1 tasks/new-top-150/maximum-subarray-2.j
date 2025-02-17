@@ -1,17 +1,17 @@
 import java.util.Arrays;
 import java.util.LinkedList;
 
-// хорошо но TL
-
 class Solution {
     public int maxSubArray(int[] nums) {
 
         var max = Integer.MIN_VALUE;
 
+        // max can be any element
         for (int i = 0; i < nums.length; i++) {
             max = Math.max(max, nums[i]);
         }
 
+        // суммируем последовательности, создаем острова
         var list = new LinkedList<Integer>();
         for (int i = 0; i < nums.length; i++) {
             var sum = nums[i];
@@ -46,6 +46,7 @@ class Solution {
             // какой смысл объединять положительные числа?
             if (a + b +c > a || a + b +c  > c) {
                 max = Math.max(max, a + b + c);
+                // это элегатное решение позволяем "рекурсивно" объединять острова дальше
                 list.set(i + 2, Math.max(a + b + c, c));
             }
             // go to c
