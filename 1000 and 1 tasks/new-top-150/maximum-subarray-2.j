@@ -1,5 +1,9 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+
+// как вариант можно не создавать новый список, а переписывать текущий
+// как двойная индексация
 
 class Solution {
     public int maxSubArray(int[] nums) {
@@ -12,7 +16,7 @@ class Solution {
         }
 
         // суммируем последовательности, создаем острова
-        var list = new LinkedList<Integer>();
+        var list = new ArrayList<Integer>();
         for (int i = 0; i < nums.length; i++) {
             var sum = nums[i];
             if (nums[i] >= 0) {
