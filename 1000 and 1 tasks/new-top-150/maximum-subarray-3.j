@@ -5,7 +5,7 @@ import java.util.LinkedList;
 class Solution {
     public int maxSubArray(int[] nums) {
 
-        long max = Integer.MIN_VALUE;
+        var max = Integer.MIN_VALUE;
 
         var lastPositiveSum = 0;
         var lastNegativeSum = 0;
@@ -45,6 +45,6 @@ class Solution {
             prevSign = sign;
         }
 
-        return (int)max;
+        return max;
     }
 }
