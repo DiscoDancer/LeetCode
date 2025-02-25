@@ -5,13 +5,24 @@ class Solution {
     public int[] merge(int[] nums1, int[] nums2) {
         var arr = new int[nums1.length + nums2.length];
         var i = 0;
-        for (var n : nums1) {
-            arr[i++] = n;
+        
+        var j1 = 0;
+        var j2 = 0;
+        
+        while (j1 < nums1.length && j2 < nums2.length) {
+            if (nums1[j1] < nums2[j2]) {
+                arr[i++] = nums1[j1++];
+            } else {
+                arr[i++] = nums2[j2++];
+            }
         }
-        for (var n : nums2) {
-            arr[i++] = n;
+        while (j1 < nums1.length) {
+            arr[i++] = nums1[j1++];
         }
-        Arrays.sort(arr);
+        while (j2 < nums2.length) {
+            arr[i++] = nums2[j2++];
+        }
+        
         return arr;
     }
 
