@@ -114,30 +114,29 @@ class Solution {
     }
 
     public double tryFindInFirst(int[] nums1, int[] nums2) {
-        // мы перебираем первый массив, и ищем по второму
-
-        var n = nums1.length;
-
         var l = 0;
-        var r = n - 1;
+        var r = nums1.length - 1;
 
         while (l <= r) {
             var m = l + (r - l) / 2;
+            // находим диапазоны чисел равных m в обоих массивах
             var rangeMinNum2 = searchRange(nums2, nums1[m]);
             var rangeMinNum1 = searchRange(nums1, nums1[m]);
-
+            
+            // для первого массива все считается легко
             var nums1ContainsLessThanM = rangeMinNum1[0];
             var nums1ContainsMoreThanM = nums1.length - rangeMinNum1[1] - 1;
 
             int nums2ContainsLessThanM;
             int nums2ContainsMoreThanM;
-
+            
+            // для второго, если элемента нет, то нужно гипотетическая позиция вставки
             if (rangeMinNum2[0] == -1) {
                 var insertPosition = searchInsert(nums2, nums1[m]);
                 nums2ContainsLessThanM = insertPosition;
                 nums2ContainsMoreThanM = nums2.length - insertPosition;
             }
-            // nums2 contains nums1[m]
+            // если он есть, то все также легко
             else {
                 nums2ContainsLessThanM = rangeMinNum2[0];
                 nums2ContainsMoreThanM = nums2.length - 1 - rangeMinNum2[1];
@@ -147,14 +146,15 @@ class Solution {
             var totalRight = nums1ContainsMoreThanM + nums2ContainsMoreThanM;
             // >= 1
             var totalMs = nums1.length + nums2.length - totalLeft - totalRight;
-
+            
+            // это ключевая идея, мы можем сказать лежит ли медиана в m или нет
             var mMinIndex = totalLeft;
             var mMaxIndex = totalLeft + totalMs - 1;
 
             var totalNumbers = nums1.length + nums2.length;
             var targetIndex = totalNumbers / 2;
 
-
+            // самый простой случай, если всего нечетное число элементов, то медиана одна и она точно в m
             if (totalNumbers % 2 == 1 && targetIndex >= mMinIndex && targetIndex <= mMaxIndex) {
                 return nums1[m];
             }
@@ -228,11 +228,12 @@ class Solution {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
+        // медиана может быть во втором или в первом, поэтому по очереди перебираем
         var normal = tryFindInFirst(nums1, nums2);
         if (normal != -1) {
             return normal;
         }
-        // then do reverse
+        
         return tryFindInFirst(nums2, nums1);
     }
 }
