@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Arrays;
+
+class Solution {
+    public int minimumTotal(List<List<Integer>> triangle) {
+
+        var prevLine = new int[] {triangle.get(0).get(0)};
+        var prevLineMin = prevLine[0];
+        for (var lineIndex = 1; lineIndex < triangle.size(); lineIndex++) {
+            var curLine = new int[lineIndex+1];
+            var curLineMin = Integer.MAX_VALUE;
+            for (var rowIndex = 0; rowIndex < triangle.get(lineIndex).size(); rowIndex++) {
+                var prevPrev = rowIndex > 0 ? prevLine[rowIndex-1] : Integer.MAX_VALUE;
+                var prev = rowIndex < triangle.get(lineIndex).size() - 1 ? prevLine[rowIndex]: Integer.MAX_VALUE;
+                curLine[rowIndex] = Math.min(prevPrev, prev) + triangle.get(lineIndex).get(rowIndex);
+
+                curLineMin = Math.min(curLineMin, curLine[rowIndex]);
+            }
+            prevLine = curLine;
+            prevLineMin = curLineMin;
+        }
+
+        return prevLineMin;
+    }
+}
