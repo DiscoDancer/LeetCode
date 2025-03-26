@@ -16,8 +16,8 @@ class Solution {
         var indexes = indexTable[c - 'a'];
 
         var result = new ArrayList<Integer>();
-        for (var i = lIndex; i < indexes.length; i++) {
-            if (indexes[i] > l && indexes[i] <= r) {
+        for (var i = lIndex + 1; i < indexes.length; i++) {
+            if (indexes[i] <= r) {
                 result.add(indexes[i]);
             }
         }
@@ -54,7 +54,6 @@ class Solution {
     public int longestPalindromeSubseq(String s) {
         this.s = s;
         var nextIndexesL = fillIndexTable();
-        // var nextIndexesL = new int[26];
 
         var table = new int[s.length() + 1][s.length() + 1];
         for (var l = s.length() - 1; l >= 0; l--) {
@@ -73,7 +72,6 @@ class Solution {
                 // и еще их можно просто пропустить левый
                 table[l][r] = Math.max(table[l][r], table[l + 1][r]);
             }
-            // nextIndexesL[s.charAt(l) - 'a']++;
         }
 
         return table[0][s.length() - 1];
