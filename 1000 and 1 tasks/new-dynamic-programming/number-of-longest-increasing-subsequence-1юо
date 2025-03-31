@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Arrays;
+
+
+class Solution {
+
+    public record Entry (int length, int count) {
+    }
+
+    public int findNumberOfLIS(int[] nums) {
+        // мы храним длину как в обычной задаче
+        // и считаем количество так, чтобы  1 1 1 2 стало (2, 3) в конце
+        var stateTable = new Entry[nums.length];
+
+        for (var i = 0; i < nums.length; i++) {
+            if (i == 0) {
+                stateTable[i] = new Entry(1, 1);
+            }
+            else {
+                var maxLength = 0;
+                var count = 0;
+                var j = i - 1;
+                while (j >= 0) {
+                    if (nums[j] < nums[i]) {
+                        if (maxLength < stateTable[j].length) {
+                            maxLength = stateTable[j].length;
+                            count = stateTable[j].count;
+                        } else if (maxLength == stateTable[j].length) {
+                            count += stateTable[j].count;
+                        }
+                    }
+                    j--;
+                }
+                if (maxLength == 0) {
+                    stateTable[i] = new Entry(1, 1);
+                }
+                else {
+                    stateTable[i] = new Entry(maxLength + 1, count);
+                }
+            }
+        }
+
+        // но еще нам нужно глобально посмотреть на максимум и сделать то же самое
+        var maxLength = 0;
+        for (var i = 0; i < stateTable.length; i++) {
+            maxLength = Math.max(maxLength, stateTable[i].length);
+        }
+
+        var maxCount = 0;
+        for (var i = 0; i < stateTable.length; i++) {
+            if (stateTable[i].length == maxLength) {
+                maxCount += stateTable[i].count;
+            }
+        }
+
+        return maxCount;
+    }
+}
