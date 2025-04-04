@@ -15,6 +15,7 @@ class Solution {
             } else {
                 var max = 0;
                 for (var j = i + 1; j < envelopes.length; j++) {
+                    // 0 надо тоже проверять, потому что могут быть равны и тогда не подходит
                     if (envelopes[j][0] > envelopes[i][0] && envelopes[j][1] > envelopes[i][1]) {
                         max = Math.max(max, table[j]);
                     }
