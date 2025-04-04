@@ -9,8 +9,8 @@ class Solution {
             return 0;
         }
 
-        var l = prevI == -1 ? 0 : envelopes[prevI][0];
-        var r = prevI == -1 ? 0 : envelopes[prevI][1];
+        var l = envelopes[prevI][0];
+        var r = envelopes[prevI][1];
 
         var take = 0;
         // take
