@@ -35,11 +35,7 @@ class Solution {
             var diff = 0;
             var firstBiggerThan = binarySearch(minList, obstacles[i]);
             if (firstBiggerThan != -1) {
-                for (var x: minList) {
-                    if (x > obstacles[i]) {
-                        diff++;
-                    }
-                }
+                diff = minList.size() - firstBiggerThan;
             }
 
             dp[i] = minList.size() + 1  - diff;
