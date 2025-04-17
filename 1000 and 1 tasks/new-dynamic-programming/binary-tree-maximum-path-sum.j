@@ -7,6 +7,8 @@ class Solution {
     private HashMap<TreeNode, Integer> map = new HashMap<>();
     private int maxPretendToBeRoot = Integer.MIN_VALUE;
 
+    // функция строится как если бы мы взяли что-то одно из детей или никого из них, только себя
+    // но корню разрешено брать сразу 2х детей, поэтому мы проверяем каждого на роль корня
     private int F(TreeNode cur) {
         if (cur == null) {
             return 0;
