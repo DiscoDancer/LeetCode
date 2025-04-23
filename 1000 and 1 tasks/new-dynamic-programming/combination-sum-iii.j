@@ -10,14 +10,11 @@ class Solution {
     private int k;
 
     private void F(int curSum, List<Integer> curList, int i0) {
-        if (curSum == 0) {
+        if (curSum == 0 && curList.size() == k) {
             // copy
-            if (curList.size() == k) {
-                result.add(new ArrayList<>(curList));
-            }
-            return;
+            result.add(new ArrayList<>(curList));
         }
-        if (curSum < 0 || curList.size() == k) {
+        if (curSum <= 0 || curList.size() == k) {
             // dead end
             return;
         }
