@@ -9,7 +9,7 @@ class Solution {
     private String s;
 
     private int F(int i) {
-        if (i >= s.length()) {
+        if (i == s.length()) {
             return 1;
         }
 
