@@ -19,16 +19,13 @@ class Solution {
         }
 
         var min = Integer.MAX_VALUE;
-
-        // red
+        
         if (prevColor != RED) {
             min = Math.min(min, this.costs[i][0] + F(i + 1, RED));
         }
-        // green
         if (prevColor != GREEN) {
             min = Math.min(min, this.costs[i][1] + F(i + 1, GREEN));
         }
-        // blue
         if (prevColor != BLUE) {
             min = Math.min(min, this.costs[i][2] + F(i + 1, BLUE));
         }
