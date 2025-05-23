@@ -105,11 +105,11 @@ class Solution {
                         equalCount2++;
                     }
                 }
-
-                // todo: рассмасмотрим его как кандидата на первый из медины
+                
                 var firstMedianIndex = (nums1.length + nums2.length) / 2 - 1;
                 var secondMedianIndex = (nums1.length + nums2.length) / 2;
                 var l = lessThanCount2 + lessThanCount1;
+                // -1 чтобы не считать самого себя
                 var r = l + equalCount1 + equalCount2 - 1;
                 var canCurrentBeFirstMedianIndex = l <= firstMedianIndex && firstMedianIndex <= r;
                 var canCurrentBeSecondMedianIndex = l <= secondMedianIndex && secondMedianIndex <= r;
