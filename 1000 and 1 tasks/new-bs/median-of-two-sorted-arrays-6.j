@@ -50,20 +50,20 @@ class Solution {
             var biggerThanCount2 = firstBiggerThanIndex2 == -1 ? 0 : nums2.length - firstBiggerThanIndex2;
             var equalCount2 = nums2.length - lessThanCount2 - biggerThanCount2;
 
-            var l = lessThanCount2 + lessThanCount1;
+            var firstEqualIndex = lessThanCount2 + lessThanCount1;
             // -1 чтобы не считать самого себя
-            var r = l + equalCount1 + equalCount2 - 1;
+            var lastEqualIndex = firstEqualIndex + equalCount1 + equalCount2 - 1;
 
             if ((nums1.length + nums2.length) % 2 == 1) {
                 var medianIndex = (nums1.length + nums2.length) / 2;
-                if (l <= medianIndex && medianIndex <= r) {
+                if (firstEqualIndex <= medianIndex && medianIndex <= lastEqualIndex) {
                     return nums1[i1];
                 }
             } else {
                 var firstMedianIndex = (nums1.length + nums2.length) / 2 - 1;
                 var secondMedianIndex = (nums1.length + nums2.length) / 2;
-                var canCurrentBeFirstMedianIndex = l <= firstMedianIndex && firstMedianIndex <= r;
-                var canCurrentBeSecondMedianIndex = l <= secondMedianIndex && secondMedianIndex <= r;
+                var canCurrentBeFirstMedianIndex = firstEqualIndex <= firstMedianIndex && firstMedianIndex <= lastEqualIndex;
+                var canCurrentBeSecondMedianIndex = firstEqualIndex <= secondMedianIndex && secondMedianIndex <= lastEqualIndex;
                 if (canCurrentBeFirstMedianIndex && canCurrentBeSecondMedianIndex) {
                     return nums1[i1];
                 }
