@@ -3,7 +3,6 @@ import java.util.*;
 class Solution {
 
     private int findLastLessThanIndex(int[] nums, int x, int i0) {
-
         var l = i0;
         var r = nums.length - 1;
 
@@ -22,12 +21,20 @@ class Solution {
     }
 
     private int findFirstIndexBiggerThan(int[] nums, int x, int i0) {
-        for (var i = i0; i < nums.length; i++) {
-            if (nums[i] > x) {
-                return i;
+        var l = i0;
+        var r = nums.length - 1;
+        
+        while (l <= r) {
+            var m = l + (r - l) / 2;
+            if (nums[m] > x && (m == i0 || nums[m - 1] <= x)) {
+                return m;
+            } else if (nums[m] > x) {
+                r = m - 1;
+            } else {
+                l = m + 1;
             }
         }
-
+        
         return -1;
     }
 
