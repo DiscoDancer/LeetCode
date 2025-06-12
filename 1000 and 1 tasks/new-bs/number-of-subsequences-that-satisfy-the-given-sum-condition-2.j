@@ -8,9 +8,22 @@ class Solution {
 
     private int[] nums;
 
-    private int bs(int l, int target) {
+    // последнее меньше либо равно
+    private int bs(int l0, int target) {
+        var l = l0;
         int r = nums.length - 1;
-        return 0;
+        while (l <= r) {
+            var m = l + (r - l) / 2;
+            if (nums[m] <= target && (m == nums.length-1 || nums[m + 1] > target)) {
+                return m;
+            }
+            if (nums[m] <= target) {
+                l = m + 1;
+            } else {
+                r = m - 1;
+            }
+        }
+        return -1;
     }
 
 
@@ -24,10 +37,7 @@ class Solution {
         var result = BigInteger.valueOf(0);
 
         for (var left = 0; left < nums.length && nums[left]*2 <= target; left++) {
-            var right = left;
-            while (right < nums.length - 1 && nums[left] + nums[right + 1] <= target) {
-                right++;
-            }
+            var right = bs(left, target- nums[left]);
 
             var length = right - left + 1;
             result = result.add( BigInteger.valueOf(2).pow(length - 1));
