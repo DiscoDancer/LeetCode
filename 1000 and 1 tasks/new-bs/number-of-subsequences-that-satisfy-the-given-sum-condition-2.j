@@ -23,10 +23,7 @@ class Solution {
 
         var result = BigInteger.valueOf(0);
 
-        for (var left = 0; left < nums.length; left++) {
-            if (nums[left]*2 > target) {
-                break;
-            }
+        for (var left = 0; left < nums.length && nums[left]*2 <= target; left++) {
             var right = left;
             while (right < nums.length - 1 && nums[left] + nums[right + 1] <= target) {
                 right++;
