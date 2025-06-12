@@ -1,0 +1,43 @@
+import java.math.BigInteger;
+import java.util.*;
+
+
+class Solution {
+
+    private int mod = 1000000007;
+
+    private int[] nums;
+
+    private int bs(int l, int target) {
+        int r = nums.length - 1;
+        return 0;
+    }
+
+
+    public int numSubseq(int[] nums, int target) {
+        // почему надо сортировать?
+        // рандомный хуй объяснил, что так как мы ищем минимум и максимум, то "порядок" не ломается от сортировки
+        // на примере всего массива, не важно в каком порядке элементы, максимум и минимум будут одинаковыми
+        Arrays.sort(nums);
+        this.nums = nums;
+
+        var result = BigInteger.valueOf(0);
+
+        for (var left = 0; left < nums.length; left++) {
+            if (nums[left]*2 > target) {
+                break;
+            }
+            var right = left;
+            while (right < nums.length - 1 && nums[left] + nums[right + 1] <= target) {
+                right++;
+            }
+
+            var length = right - left + 1;
+            result = result.add( BigInteger.valueOf(2).pow(length - 1));
+        }
+
+        result = result.mod(BigInteger.valueOf(mod));
+
+        return result.intValue();
+    }
+}
