@@ -1,6 +1,10 @@
 import java.math.BigInteger;
 import java.util.*;
 
+
+// TL
+// Важно, что условия построения гарантирует нам processResult валидный результат
+
 class Solution {
 
     private int[] nums;
@@ -9,10 +13,6 @@ class Solution {
     private int min = Integer.MAX_VALUE;
 
     private void processResult(int[] marking) {
-        if (marking[marking.length - 1] != k) {
-            return;
-        }
-
         var table = new int[k+1];
         for (int i = 0; i < marking.length; i++) {
             table[marking[i]] += nums[i];
