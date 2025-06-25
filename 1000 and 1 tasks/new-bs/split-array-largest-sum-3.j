@@ -10,7 +10,7 @@ class Solution {
 
         for (var targetSum = max; targetSum <= sum; targetSum++) {
             // нужно форсить взятие
-            var currentSum = sum + 1;
+            long currentSum = sum + 1;
             var pileCount = 0;
             for (var i = 0; i < nums.length; i++) {
                 if (currentSum + nums[i] <= targetSum)  {
