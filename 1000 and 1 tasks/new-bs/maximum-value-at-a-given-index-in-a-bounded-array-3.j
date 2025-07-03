@@ -1,8 +1,22 @@
 import java.math.BigInteger;
 import java.util.*;
 
+// см koko bananas
+// https://leetcode.com/problems/koko-eating-bananas/description/
+
+/*
+    В чем суть, мы берем кандидат в ответы и проверяем, можем ли мы его поставить на позицию index.
+    Бинарный поиск, все как в koko bananas, ничего интересного.
+    
+    Интересно быстро проверять кандидата, не пыпаться заполнить массив и считать сумму.
+    
+    Получается, что нам всегда выгоднее уменьшать массив от числа Х, справа и слева. Но на определенном этапе мы дойдем до единиц.
+    Значит, нам нужна арифметическая прогрессия и количество единиц.
+ */
+
 class Solution {
 
+    // сумма арифметической прогрессии
     private long fs(long x0, long n) {
         if (n == 0) {
             return 0;
@@ -11,6 +25,7 @@ class Solution {
         return s;
     }
 
+    // сколько нужно чтобы дойти до 1 + количество единиц
     private long calcSideSum(long size, long candidate) {
         long rightSideSize = size;
         long rightSideRequiresNextToBe1 = Math.max(candidate - 2, 0);
@@ -20,7 +35,7 @@ class Solution {
         return rightSideSum;
     }
 
-    private boolean checkCandidate(int n, int index, int candidate, int maxSum) {
+    private boolean checkCandidate(int candidate) {
         if (candidate < 1) {
             return false;
         }
@@ -35,15 +50,23 @@ class Solution {
 
         return totalSum <= maxSum;
     }
+    
+    private int n;
+    private int index;
+    private int maxSum;
 
     public int maxValue(int n, int index, int maxSum) {
+        this.n = n;
+        this.index = index;
+        this.maxSum = maxSum;
+        
         var l = 1;
         var r = maxSum;
 
         while (l <= r) {
             var m = l + (r - l) / 2;
-            var fm = checkCandidate(n, index, m, maxSum);
-            if (fm && (m == maxSum || !checkCandidate(n, index, m + 1, maxSum))) {
+            var fm = checkCandidate(m);
+            if (fm && (m == maxSum || !checkCandidate( m + 1))) {
                 return m;
             } else if (fm) {
                 l = m + 1;
