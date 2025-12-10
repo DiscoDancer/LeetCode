@@ -1,5 +1,7 @@
 import java.util.*;
 
+// n*n
+
 
 class Solution {
 
